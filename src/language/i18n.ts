@@ -21,6 +21,10 @@ i18n.use(initReactI18next).init({
 							wirelessHeadphones: "Wireless Headphones",
 							headphones: "Headphones",
 						},
+						offline: {
+							status: "You're offline",
+							message: "Please check your internet connection.",
+						},
 					}
         },
         ru: {
@@ -39,6 +43,10 @@ i18n.use(initReactI18next).init({
 							wirelessHeadphones: "Беспроводные наушники",
 							headphones: "Наушники",
 						},
+						offline: {
+							status: "Вы не в сети",
+							message: "Пожалуйста, проверьте подключение к интернету.",
+						},
 					}
         },
         kz: {
@@ -56,6 +64,10 @@ i18n.use(initReactI18next).init({
 							buy: "Сатып алу",
 							wirelessHeadphones: "Сымсыз құлаққаптар",
 							headphones: "Құлаққаптар",
+						},
+						offline: {
+							status: "Сіз желіден тыссыз",
+							message: "Интернет қосылымын тексеріңіз.",
 						},
 					}
         }
