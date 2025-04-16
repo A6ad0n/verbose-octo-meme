@@ -12,7 +12,7 @@ const LanguageChange = () => {
     const [lng, setLng] = useState<string>(i18n.language);
     const languageArray: Array<LngProps> = [...languages];
     return (
-      <div className="flex flex-row items-center justify-center bg-white gap-2 p-2 w-full max-w-full">
+      <div className="flex flex-row items-center justify-center gap-2 p-2 w-full max-w-full">
 				<MdOutlineLanguage className="w-[1.2em] h-[1.2em] text-gray-600"/>
         {languageArray.map(({code, name}: any) => {
           const isActive: boolean = lng === code;

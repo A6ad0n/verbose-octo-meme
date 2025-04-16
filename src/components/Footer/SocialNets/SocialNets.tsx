@@ -16,7 +16,7 @@ const SocialNets = ({ vkURL, tgURL, whURL }: SocialNextsProps) => {
 ];
 
 return (
-  <div className="flex flex-row items-center justify-center bg-white gap-2 w-full max-w-full">
+  <div className="flex flex-row items-center justify-center gap-2 w-full max-w-full">
     {socialLinks.map(({ href, icon }, index) => (
       <a key={index} href={href} target="_blank" rel="noopener noreferrer">
         {icon}
