@@ -13,7 +13,7 @@ const Header = ({
 			<ButtonWithIcon
 				text="QPICK"
 				className="font-montserrat font-bold text-[25px]"
-				onClick={() => navigate('./')}
+				onClick={() => navigate('/')}
 			/>
 			
 			<div className="flex gap-[1em] relative">
@@ -21,6 +21,7 @@ const Header = ({
 					<ButtonWithIcon 
 						Icon={FaRegHeart}
 						className="text-gray-500 w-[1.5em] h-[1.5em]"
+						onClick={() => navigate('/fav')}
 					/>
 					{favCount !== 0 && (
 						<span className="absolute -top-2 -right-2 bg-morange text-white text-xs rounded-full w-[1.5em] h-[1.5em] flex items-center justify-center">
@@ -32,6 +33,7 @@ const Header = ({
 					<ButtonWithIcon
 						Icon={IoCartOutline}
 						className="text-gray-500 w-[1.5em] h-[1.5em]"
+						onClick={() => navigate('/cart')}
 					/>
 					{cartCount !== 0 && (
 						<span className="absolute -top-2 -right-2 bg-morange text-white text-xs rounded-full w-[1.5em] h-[1.5em] flex items-center justify-center">
