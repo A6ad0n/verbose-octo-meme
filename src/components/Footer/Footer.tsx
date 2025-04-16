@@ -2,11 +2,11 @@ import ButtonWithIcon from "@components/Buttons/ButtonWithIcon";
 import LanguageChange from "./LanguageChange/LanguageChange"
 import SocialNets from "./SocialNets/SocialNets"
 import { useTranslation } from "react-i18next"
-import { useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
 	const { t } = useTranslation();
-	const navigate = useNavigation();
+	const navigate = useNavigate();
   return (
     <div className="fixed bottom-0 left-0 sm:left-0 sm:right-0 md:left-[10em] md:right-[10em] px-[0.5em] md:px-[0.5em] pt-[0.5em] rounded-t-2xl bg-white">
 			<table className="relative table-auto w-full bt-[0.5em] bl-[0.5em] br-[0.5em] text-left">
