@@ -1,0 +1,21 @@
+[
+	{
+		"image": "",
+		"name": "Airpods",
+		"price": "2 000",
+		"rating": 4.5
+	},
+	{
+		"image": "",
+		"name": "Airpods",
+		"price": "2 000",
+		"discountedPrice": "1 000",
+		"rating": 4.5
+	},
+	{
+		"image": "",
+		"name": "Airpods",
+		"price": "2 000",
+		"rating": 4.5
+	}
+]

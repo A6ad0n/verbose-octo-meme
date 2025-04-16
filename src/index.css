@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@tailwind utilities;
+
 
 @theme {
   --color-morange: rgb(255, 165, 65)
