@@ -2,25 +2,33 @@ import ButtonWithIcon from "@components/Buttons/ButtonWithIcon";
 import LanguageChange from "./LanguageChange/LanguageChange"
 import SocialNets from "./SocialNets/SocialNets"
 import { useTranslation } from "react-i18next"
+import { useNavigation } from 'react-router-dom'
 
 const Footer = () => {
 	const { t } = useTranslation();
+	const navigate = useNavigation();
   return (
     <div className="fixed bottom-0 left-0 sm:left-0 sm:right-0 md:left-[10em] md:right-[10em] px-[0.5em] md:px-[0.5em] pt-[0.5em] rounded-t-2xl bg-white">
 			<table className="relative table-auto w-full bt-[0.5em] bl-[0.5em] br-[0.5em] text-left">
 				<tbody>
 					<tr>
 						<td className="row-span-2 align-top p-4 w-[30%] hidden md:table-cell" rowSpan={2}>
-							<p className="absolute top-0 left-0 font-montserrat font-bold text-[25px]">QPICK</p>
+						<ButtonWithIcon
+							text="QPICK"
+							className="font-montserrat font-bold text-[25px]"
+							onClick={() => navigate('/')}
+						/>
 						</td>
 						<td className="w-[20%]">
 							<ButtonWithIcon
 								text={t("footer.favourite")}
+								onClick={() => navigate('/fav')}
 							/>
 						</td>
 						<td className="w-[20%] text-center">
 							<ButtonWithIcon
 								text={t("footer.terms")}
+								onClick={() => navigate('/terms')}
 							/>
 						</td>
 						<td className="w-[30%] hidden lg:table-cell" rowSpan={2}>
@@ -37,6 +45,7 @@ const Footer = () => {
 						<td className="">
 							<ButtonWithIcon
 								text={t("footer.cart")}
+								onClick={() => navigate('/cart')}
 							/>
 						</td>
 						<td className="align-top" rowSpan={2}>
@@ -50,6 +59,7 @@ const Footer = () => {
 						<td className="">
 							<ButtonWithIcon
 								text={t("footer.contacts")}
+								onClick={() => navigate('/contacts')}
 							/>
 						</td>
 						<td className=" hidden lg:table-cell"></td>
