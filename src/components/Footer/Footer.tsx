@@ -15,12 +15,12 @@ const Footer = () => {
 						</td>
 						<td className="w-[20%]">
 							<ButtonWithIcon
-								text={t("Избранное")}
+								text={t("footer.favourite")}
 							/>
 						</td>
 						<td className="w-[20%] text-center">
 							<ButtonWithIcon
-								text={t("Условия сервиса")}
+								text={t("footer.terms")}
 							/>
 						</td>
 						<td className="w-[30%] hidden lg:table-cell" rowSpan={2}>
@@ -36,7 +36,7 @@ const Footer = () => {
 					<tr>
 						<td className="">
 							<ButtonWithIcon
-								text={t("Корзина")}
+								text={t("footer.cart")}
 							/>
 						</td>
 						<td className="align-top" rowSpan={2}>
@@ -49,7 +49,7 @@ const Footer = () => {
 						<td className="hidden md:table-cell"></td>
 						<td className="">
 							<ButtonWithIcon
-								text={t("Контакты")}
+								text={t("footer.contacts")}
 							/>
 						</td>
 						<td className=" hidden lg:table-cell"></td>
