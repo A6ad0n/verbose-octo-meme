@@ -7,17 +7,38 @@ i18n.use(initReactI18next).init({
     resources: {
         en: {
 					translation: {
-            helloWorld: "Hello World!"
+            helloWorld: "Hello World!",
+						
+						footer: {
+							cart: "Cart",
+							favourite: "Favourites",
+							contacts: "Contacts",
+							terms: "Terms of Service",
+						},
 					}
         },
         ru: {
 					translation: {
-            helloWorld: "Привет Мир!"
+            helloWorld: "Привет Мир!",
+
+						footer: {
+							cart: "Корзина",
+							favourite: "Избранное",
+							contacts: "Контакты",
+							terms: "Условия сервиса",
+						},
 					}
         },
         kz: {
 					translation: {
-            helloWorld: "Сәлем Әлем!"
+            helloWorld: "Сәлем Әлем!",
+
+						footer: {
+							cart: "Себет",
+							favourite: "Таңдаулылар",
+							contacts: "Байланыс",
+							terms: "Қызмет шарттары",
+						},
 					}
         }
     }
