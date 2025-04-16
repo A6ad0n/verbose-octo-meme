@@ -8,6 +8,7 @@ i18n.use(initReactI18next).init({
         en: {
 					translation: {
             helloWorld: "Hello World!",
+						currency: "₽",
 						
 						footer: {
 							cart: "Cart",
@@ -15,11 +16,17 @@ i18n.use(initReactI18next).init({
 							contacts: "Contacts",
 							terms: "Terms of Service",
 						},
+						products: {
+							buy: "Buy",
+							wirelessHeadphones: "Wireless Headphones",
+							headphones: "Headphones",
+						},
 					}
         },
         ru: {
 					translation: {
             helloWorld: "Привет Мир!",
+						currency: "$",
 
 						footer: {
 							cart: "Корзина",
@@ -27,17 +34,28 @@ i18n.use(initReactI18next).init({
 							contacts: "Контакты",
 							terms: "Условия сервиса",
 						},
+						products: {
+							buy: "Купить",
+							wirelessHeadphones: "Беспроводные наушники",
+							headphones: "Наушники",
+						},
 					}
         },
         kz: {
 					translation: {
             helloWorld: "Сәлем Әлем!",
+						currency: "₸",
 
 						footer: {
 							cart: "Себет",
 							favourite: "Таңдаулылар",
 							contacts: "Байланыс",
 							terms: "Қызмет шарттары",
+						},
+						products: {
+							buy: "Сатып алу",
+							wirelessHeadphones: "Сымсыз құлаққаптар",
+							headphones: "Құлаққаптар",
 						},
 					}
         }
