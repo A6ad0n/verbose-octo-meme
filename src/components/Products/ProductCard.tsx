@@ -3,13 +3,21 @@ import { FaStar } from "react-icons/fa";
 import { ProductType } from "@app-types/types";
 import { useTranslation } from "react-i18next";
 
-const ProductCard = (item: ProductType) => {
+interface ProductCardProps {
+  item: ProductType;
+  setCartCount?: (count: number) => void;
+  setFavCount?:  (count: number) => void;
+}
+
+const ProductCard = ({ item, setCartCount, setFavCount }: ProductCardProps) => {
   const { t } = useTranslation();
   const handleAddToCart = (item: ProductType) => {
     const stored = localStorage.getItem('cart');
     const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];
     cart.push(item);
     localStorage.setItem('cart', JSON.stringify(cart));
+    if (setCartCount)
+      setCartCount(cart.length);
   }
   return (
     <div className="w-[350px] h-[407px] bg-white rounded-xl shadow-md flex flex-col justify-between p-[1em]">
