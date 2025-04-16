@@ -1,5 +1,6 @@
 import ButtonWithIcon from "@components/Buttons/ButtonWithIcon";
 import { FaStar } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { ProductType } from "@app-types/types";
 import { useTranslation } from "react-i18next";
 
@@ -18,6 +19,17 @@ const ProductCard = ({ item, setCartCount, setFavCount }: ProductCardProps) => {
     localStorage.setItem('cart', JSON.stringify(cart));
     if (setCartCount)
       setCartCount(cart.length);
+  }
+  const handleAddToFav = (item: ProductType) => {
+    const stored = localStorage.getItem('fav');
+    const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];
+    const exists = cart.some(value => value.name === item.name);
+    if (!exists) {
+      cart.push(item);
+      localStorage.setItem('fav', JSON.stringify(cart));
+      if (setFavCount)
+        setFavCount(cart.length);
+    }
   }
   return (
     <div className="w-[350px] h-[407px] bg-white rounded-xl shadow-md flex flex-col justify-between p-[1em]">
@@ -40,11 +52,18 @@ const ProductCard = ({ item, setCartCount, setFavCount }: ProductCardProps) => {
           <FaStar className="text-yellow-500" />
           {item.rating.toFixed(1)}
         </div>
-        <ButtonWithIcon
-          text={t("products.buy")}
-					className="bg-morange text-white w-[10em] py-[0.5em] rounded-lg text-sm font-semibold"
-          onClick={() => handleAddToCart(item)}
-				/>
+        <div className="flex flex-row gap-[0.5em]">
+          <ButtonWithIcon
+            Icon={FaRegHeart}
+            className="text-morange text-xl font-semibold"
+            onClick={() => handleAddToFav(item)}
+          />
+          <ButtonWithIcon
+            text={t("products.buy")}
+            className="bg-morange text-white w-[10em] py-[0.5em] rounded-lg text-sm font-semibold"
+            onClick={() => handleAddToCart(item)}
+          />
+        </div>
       </div>
     </div>
   );

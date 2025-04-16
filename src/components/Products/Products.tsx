@@ -17,6 +17,7 @@ const Products = ({ setCartCount, setFavCount }: ProductProps) => {
             key={index}
             item={item}
             setCartCount={setCartCount}
+            setFavCount={setFavCount}
           />
         ))}
       </div>
