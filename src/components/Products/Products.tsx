@@ -2,7 +2,12 @@ import { ProductType } from "@app-types/types";
 import data from "./data.json"
 import ProductCard from "./ProductCard";
 
-const Products = () => {
+interface ProductProps {
+  setCartCount?: (count: number) => void;
+  setFavCount?: (count: number) => void;
+}
+
+const Products = ({ setCartCount, setFavCount }: ProductProps) => {
   const products: Array<ProductType> = [...data];
   return (
     <div className="w-full flex justify-center">
@@ -10,11 +15,8 @@ const Products = () => {
         {products.map((item: ProductType, index: number) => (
           <ProductCard 
             key={index}
-            image={item.image}
-            name={item.name}
-            price={item.price}
-            discountedPrice={item.discountedPrice}
-            rating={item.rating}
+            item={item}
+            setCartCount={setCartCount}
           />
         ))}
       </div>
