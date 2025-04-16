@@ -8,7 +8,10 @@ const Header = ({
 }: {favCount?: number, cartCount?: number}) => {
   return (
 		<div className="fixed top-0 left-0 right-0 sm:left-0 sm:right-0 md:left-[7em] md:right-[7em] flex justify-between items-center py-[0.5em]">
-			<p className="font-montserrat font-bold text-[25px]">QPICK</p>
+			<ButtonWithIcon
+				text="QPICK"
+				className="font-montserrat font-bold text-[25px]"
+			/>
 			
 			<div className="flex gap-[1em] relative">
 				<div className="relative">
