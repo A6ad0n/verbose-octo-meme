@@ -1,16 +1,19 @@
 import ButtonWithIcon from "@components/Buttons/ButtonWithIcon";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({
 	favCount = 0,
 	cartCount = 0
 }: {favCount?: number, cartCount?: number}) => {
+	const navigate = useNavigate();
   return (
 		<div className="fixed top-0 left-0 right-0 sm:left-0 sm:right-0 md:left-[7em] md:right-[7em] flex justify-between items-center py-[0.5em]">
 			<ButtonWithIcon
 				text="QPICK"
 				className="font-montserrat font-bold text-[25px]"
+				onClick={() => navigate('./')}
 			/>
 			
 			<div className="flex gap-[1em] relative">
