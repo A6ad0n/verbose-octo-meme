@@ -8,11 +8,8 @@ const ProductCard = (item: ProductType) => {
   const handleAddToCart = (item: ProductType) => {
     const stored = localStorage.getItem('cart');
     const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];
-    const exists = cart.some(p => p.name === item.name);
-    if (!exists) {
-      cart.push(item);
-      localStorage.setItem('cart', JSON.stringify(cart));
-    }
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
   return (
     <div className="w-[350px] h-[407px] bg-white rounded-xl shadow-md flex flex-col justify-between p-[1em]">
