@@ -25,6 +25,9 @@ i18n.use(initReactI18next).init({
 							status: "You're offline",
 							message: "Please check your internet connection.",
 						},
+						cartProducts: {
+							empty: "Your cart is empty.",
+						},
 					}
         },
         ru: {
@@ -47,6 +50,9 @@ i18n.use(initReactI18next).init({
 							status: "Вы не в сети",
 							message: "Пожалуйста, проверьте подключение к интернету.",
 						},
+						cartProducts: {
+							empty: "Ваша корзина пуста.",
+						},
 					}
         },
         kz: {
@@ -68,6 +74,9 @@ i18n.use(initReactI18next).init({
 						offline: {
 							status: "Сіз желіден тыссыз",
 							message: "Интернет қосылымын тексеріңіз.",
+						},
+						cartProducts: {
+							empty: "Сіздің себетіңіз бос.",
 						},
 					}
         }
