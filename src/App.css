@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 .hover-scale-button:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
   filter: brightness(0.9);
 }
 

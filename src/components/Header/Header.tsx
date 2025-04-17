@@ -12,7 +12,7 @@ const Header = ({
 		<div className="fixed z-100 top-0 left-0 right-0 sm:left-0 sm:right-0 md:left-[7em] md:right-[7em] flex justify-between items-center px-[1em] py-[0.5em]">
 			<ButtonWithIcon
 				text="QPICK"
-				className="font-montserrat font-bold text-[25px]"
+				className="font-montserrat font-bold text-[25px] hover-scale-button"
 				onClick={() => navigate('/')}
 			/>
 			
@@ -20,7 +20,7 @@ const Header = ({
 				<div className="relative">
 					<ButtonWithIcon 
 						Icon={FaRegHeart}
-						className="text-gray-500 w-[1.5em] h-[1.5em]"
+						className="text-gray-500 w-[1.5em] h-[1.5em] hover-scale-button"
 						onClick={() => navigate('/fav')}
 					/>
 					{favCount !== 0 && (
@@ -32,7 +32,7 @@ const Header = ({
 				<div className="relative">
 					<ButtonWithIcon
 						Icon={IoCartOutline}
-						className="text-gray-500 w-[1.5em] h-[1.5em]"
+						className="text-gray-500 w-[1.5em] h-[1.5em] hover-scale-button"
 						onClick={() => navigate('/cart')}
 					/>
 					{cartCount !== 0 && (
