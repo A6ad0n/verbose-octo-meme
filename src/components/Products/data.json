@@ -17,5 +17,17 @@
 		"name": "Airpods MAX",
 		"price": "2 000",
 		"rating": 4.5
+	},
+	{
+		"image": "",
+		"name": "Airpods PROMAX",
+		"price": "2 000",
+		"rating": 4.5
+	},
+	{
+		"image": "",
+		"name": "Airpods MINI",
+		"price": "2 000",
+		"rating": 4.5
 	}
 ]

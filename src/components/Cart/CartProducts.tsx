@@ -40,23 +40,23 @@ const CartProducts = ({ defaultItems = [], setCartCount }: CartProductsProps) =>
   };
 
   return (
-    <div className="flex flex-col gap-[1.5em] mt-[1em] pb-[7em]">
-      {cartItems.length === 0 ? (
-        <p>{t("cartProducts.empty")}</p>
-      ) : (
+    <div className="flex flex-col gap-[1.5em] overflow-y-auto max-h-[27em]">
+      {cartItems.filter((p) => p.count !== 0).length > 0 ? (
         cartItems
-        .filter((product: ProductType) => product.count !== 0)
-        .map((product: ProductType, index: number) => (
-          <CartItem
-            key={index}
-            product={product}
-            onIncrease={() => changeItemCount(product, 'increase')}
-            onDecrease={() => changeItemCount(product, 'decrease')}
-            onDelete={() => handleDeleteFromCart(product)}
-          />
-        ))
+          .filter((product: ProductType) => product.count !== 0)
+          .map((product: ProductType, index: number) => (
+            <CartItem
+              key={index}
+              product={product}
+              onIncrease={() => changeItemCount(product, "increase")}
+              onDecrease={() => changeItemCount(product, "decrease")}
+              onDelete={() => handleDeleteFromCart(product)}
+            />
+          ))
+      ) : (
+        <p>{t("cartProducts.empty")}</p>
       )}
-    </div>
+    </div>  
   );
 };
 
