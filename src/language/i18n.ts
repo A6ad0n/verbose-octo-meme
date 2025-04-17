@@ -8,7 +8,7 @@ i18n.use(initReactI18next).init({
         en: {
 					translation: {
             helloWorld: "Hello World!",
-						currency: "₽",
+						currency: "$",
 						
 						footer: {
 							cart: "Cart",
@@ -30,7 +30,7 @@ i18n.use(initReactI18next).init({
         ru: {
 					translation: {
             helloWorld: "Привет Мир!",
-						currency: "$",
+						currency: "₽",
 
 						footer: {
 							cart: "Корзина",
