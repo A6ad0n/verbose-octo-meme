@@ -13,6 +13,8 @@ interface CartItemProps {
 
 const CartItem = ({ product, onIncrease, onDecrease, onDelete }: CartItemProps) => {
 	const { t } = useTranslation();
+  const sumPrice: string = ((product.discountedPrice ? 
+    parseNumber(product.discountedPrice!) : parseNumber(product.price)) * product.count!).toFixed(2)
   return (
     <div className="flex relative w-[633px] h-[218px] items-center p-[1em] rounded-xl bg-white">
 			<div className="flex flex-col justify-center items-center">
@@ -40,7 +42,14 @@ const CartItem = ({ product, onIncrease, onDecrease, onDelete }: CartItemProps) 
 
       <div className="flex flex-col justify-start ml-[1em] text-left">
         <p className="font-semibold text-base">{product.name}</p>
-        <p className="text-gray-500 text-xs">{product.price} {t("currency")}</p>
+        {product.discountedPrice ? (
+            <>
+              <p className="text-base font-bold">{product.discountedPrice} {t("currency")}</p>
+              <p className="line-through text-sm text-gray">{product.price} {t("currency")}</p>
+            </>
+          ) : (
+            <p className="text-base font-bold">{product.price} {t("currency")}</p>
+          )}
       </div>
 
       <div className="absolute top-[1em] right-[1em]">
@@ -53,7 +62,7 @@ const CartItem = ({ product, onIncrease, onDecrease, onDelete }: CartItemProps) 
 
       <div className="absolute bottom-[1em] right-[1em]">
         <p className="font-semibold">
-          {(parseNumber(product.price) * product.count!).toFixed(2)} {t("currency")}
+          {sumPrice} {t("currency")}
         </p>
       </div>
     </div>
