@@ -43,7 +43,7 @@ const ProductCard = ({ item, setCartCount, setFavCount }: ProductCardProps) => {
     }
   }
   return (
-    <div className="w-[350px] h-[407px] bg-white rounded-xl shadow-md flex flex-col justify-between p-[1em]">
+    <div className="w-[350px] h-[407px] bg-white rounded-xl shadow-md flex flex-col justify-between p-[1em] hover-scale-div">
       <img src={item.image} alt={item.name} className="w-full h-[250px] object-contain" />
       <div className="flex justify-between items-start mt-[0.5em] min-h-[60px]">
         <p className="text-base font-semibold text-black max-w-[65%]">{item.name}</p>
@@ -66,12 +66,12 @@ const ProductCard = ({ item, setCartCount, setFavCount }: ProductCardProps) => {
         <div className="flex flex-row gap-[0.5em]">
           <ButtonWithIcon
             Icon={FaRegHeart}
-            className="text-morange text-xl font-semibold"
+            className="text-morange text-xl font-semibold hover-scale-button"
             onClick={() => handleAddToFav(item)}
           />
           <ButtonWithIcon
             text={t("products.buy")}
-            className="bg-morange text-white w-[10em] py-[0.5em] rounded-lg text-sm font-semibold"
+            className="bg-morange text-white w-[10em] py-[0.5em] rounded-lg text-sm font-semibold hover-scale-button"
             onClick={() => handleAddToCart(item)}
           />
         </div>

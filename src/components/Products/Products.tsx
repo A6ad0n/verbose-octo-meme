@@ -10,7 +10,7 @@ interface ProductsProps {
 const Products = ({ setCartCount, setFavCount }: ProductsProps) => {
   const products: Array<ProductType> = [...data];
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center mt-[2em]">
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5em] p-[1em] pb-[7em]">
         {products.map((item: ProductType, index: number) => (
           <ProductCard 
