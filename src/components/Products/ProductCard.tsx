@@ -7,19 +7,30 @@ import { useTranslation } from "react-i18next";
 interface ProductCardProps {
   item: ProductType;
   setCartCount?: (count: number) => void;
-  setFavCount?:  (count: number) => void;
+  setFavCount?: (count: number) => void;
 }
 
 const ProductCard = ({ item, setCartCount, setFavCount }: ProductCardProps) => {
   const { t } = useTranslation();
+
   const handleAddToCart = (item: ProductType) => {
     const stored = localStorage.getItem('cart');
-    const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];
-    cart.push(item);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    const data: Array<ProductType> = stored ? JSON.parse(stored) : [];
+    let isFound: boolean = false;
+    for (let i = 0; i < data.length; ++i) {
+      let val: ProductType = data[i];
+      if (!isFound && val.name === item.name) {
+        data[i] = { ...val, count: val.count! + 1}
+        isFound = true;
+      }
+    }
+    if (!isFound)
+      data.push({ ...item, count: 1 });
+    localStorage.setItem('cart', JSON.stringify(data));
     if (setCartCount)
-      setCartCount(cart.length);
+      setCartCount(data.reduce((sum, item) => sum + item.count!, 0));
   }
+  
   const handleAddToFav = (item: ProductType) => {
     const stored = localStorage.getItem('fav');
     const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];

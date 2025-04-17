@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
+import { ProductType } from '@app-types/types';
 
 type AppCountsContextType = {
   favCount: number;
@@ -17,7 +18,8 @@ export const AppCountsProvider = ({ children }: { children: ReactNode }) => {
 
   const [cartCount, setCartCount] = useState<number>(() => {
     const stored = localStorage.getItem('cart');
-    return stored ? JSON.parse(stored).length : 0;
+    const array: Array<ProductType> = stored ? JSON.parse(stored) : [];
+    return array.reduce((sum, item) => sum + item.count!, 0);
   });
 
   return (

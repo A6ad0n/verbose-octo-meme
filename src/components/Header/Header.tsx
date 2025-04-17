@@ -9,7 +9,7 @@ const Header = ({
 }: {favCount?: number, cartCount?: number}) => {
 	const navigate = useNavigate();
   return (
-		<div className="fixed top-0 left-0 right-0 sm:left-0 sm:right-0 md:left-[7em] md:right-[7em] flex justify-between items-center py-[0.5em]">
+		<div className="fixed top-0 left-0 right-0 sm:left-0 sm:right-0 md:left-[7em] md:right-[7em] flex justify-between items-center px-[1em] py-[0.5em]">
 			<ButtonWithIcon
 				text="QPICK"
 				className="font-montserrat font-bold text-[25px]"

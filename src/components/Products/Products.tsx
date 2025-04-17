@@ -2,12 +2,12 @@ import { ProductType } from "@app-types/types";
 import data from "./data.json"
 import ProductCard from "./ProductCard";
 
-interface ProductProps {
+interface ProductsProps {
   setCartCount?: (count: number) => void;
   setFavCount?: (count: number) => void;
 }
 
-const Products = ({ setCartCount, setFavCount }: ProductProps) => {
+const Products = ({ setCartCount, setFavCount }: ProductsProps) => {
   const products: Array<ProductType> = [...data];
   return (
     <div className="w-full flex justify-center">
@@ -17,7 +17,7 @@ const Products = ({ setCartCount, setFavCount }: ProductProps) => {
             key={index}
             item={item}
             setCartCount={setCartCount}
-            setFavCount={setFavCount}
+				    setFavCount={setFavCount}
           />
         ))}
       </div>

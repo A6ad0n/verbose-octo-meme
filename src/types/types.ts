@@ -9,4 +9,5 @@ export type ProductType = {
 	price: string;
 	discountedPrice?: string;
 	rating: number;
+	count?: number;
 }

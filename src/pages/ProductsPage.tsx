@@ -4,7 +4,7 @@ import Header from '@components/Header/Header'
 import { useAppCounts } from '../AppCountsContext'
 
 const ProductsPage = () => {
-	const { favCount, setFavCount, cartCount, setCartCount } = useAppCounts();
+	const { favCount, cartCount, setFavCount, setCartCount } = useAppCounts();
   return (
 		<>
 			<Header 
