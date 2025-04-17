@@ -5,7 +5,7 @@ import { ProductType } from '@app-types/types'
 import CartProducts from '@components/Cart/CartProducts'
 
 const CartPage = () => {
-	const { favCount, cartCount } = useAppCounts();
+	const { favCount, cartCount, setCartCount } = useAppCounts();
 	const loadCartItems = () => {
 		const stored = localStorage.getItem('cart');
 		const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];
@@ -19,6 +19,7 @@ const CartPage = () => {
 			/>
 			<CartProducts
 				defaultItems={loadCartItems()}
+				setCartCount={setCartCount}
 			/>
 			<Footer />
 		</>

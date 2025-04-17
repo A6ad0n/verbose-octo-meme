@@ -1,18 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import CartItem from './CartItem';
 import { ProductType } from '@app-types/types';
 
 interface CartProductsProps {
   defaultItems?: Array<ProductType>;
+  setCartCount?: (count: number) => void;
 }
 
-const CartProducts = ({ defaultItems = [] }: CartProductsProps) => {
+const CartProducts = ({ defaultItems = [], setCartCount }: CartProductsProps) => {
   const [cartItems, setCartItems] = useState<Array<ProductType>>(defaultItems);
 
   const loadCartItems = () => {
     const stored = localStorage.getItem('cart');
     const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];
     setCartItems(cart);
+    if (setCartCount)
+      setCartCount(cart.reduce((sum, item) => sum + item.count!, 0));
   };
 
   const handleDeleteFromCart = (product: ProductType) => {

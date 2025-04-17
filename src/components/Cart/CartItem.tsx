@@ -1,5 +1,4 @@
 import ButtonWithIcon from '@components/Buttons/ButtonWithIcon';
-import { useState, useEffect } from 'react'
 import { RiDeleteBin2Line } from "react-icons/ri";
 import { ProductType } from '@app-types/types';
 import { useTranslation } from 'react-i18next';
