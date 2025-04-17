@@ -25,7 +25,11 @@ const CartPage = () => {
 	const cart: Array<ProductType> = loadCartItems();
 
 	const findSum = (arr: Array<ProductType>): number => {
-		return arr.reduce((sum, item) => sum + item.count! * parseNumber(item.price), 0);
+		return arr.reduce((sum, item) => 
+			sum + item.count! * (item.discountedPrice ? 
+				parseNumber(item.discountedPrice) : 
+				parseNumber(item.price)), 
+		0);
 	}
   return (
 		<>
