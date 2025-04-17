@@ -1,31 +1,55 @@
 [
 	{
-		"image": "",
+		"image": "src/assets/Image.svg",
 		"name": "Airpods",
 		"price": "2 000",
 		"rating": 4.5
 	},
 	{
-		"image": "",
+		"image": "src/assets/Image-2.svg",
 		"name": "Airpods PRO",
 		"price": "2 000",
 		"discountedPrice": "1 000",
 		"rating": 4.5
 	},
 	{
-		"image": "",
+		"image": "src/assets/Image-3.svg",
 		"name": "Airpods MAX",
 		"price": "2 000",
 		"rating": 4.5
 	},
 	{
-		"image": "",
+		"image": "src/assets/Image-4.svg",
 		"name": "Airpods PROMAX",
 		"price": "2 000",
 		"rating": 4.5
 	},
 	{
-		"image": "",
+		"image": "src/assets/Image-5.svg",
+		"name": "Airpods MINI",
+		"price": "2 000",
+		"rating": 4.5
+	},
+	{
+		"image": "src/assets/Image-6.svg",
+		"name": "Airpods MINI",
+		"price": "2 000",
+		"rating": 4.5
+	},
+	{
+		"image": "src/assets/Image-7.svg",
+		"name": "Airpods MINI",
+		"price": "2 000",
+		"rating": 4.5
+	},
+	{
+		"image": "src/assets/Image-8.svg",
+		"name": "Airpods MINI",
+		"price": "2 000",
+		"rating": 4.5
+	},
+	{
+		"image": "src/assets/Image-9.svg",
 		"name": "Airpods MINI",
 		"price": "2 000",
 		"rating": 4.5
