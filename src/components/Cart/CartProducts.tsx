@@ -54,7 +54,7 @@ const CartProducts = ({ defaultItems = [], setCartCount }: CartProductsProps) =>
             />
           ))
       ) : (
-        <p>{t("cartProducts.empty")}</p>
+        <p>{t("cartPage.empty")}</p>
       )}
     </div>  
   );

@@ -52,6 +52,7 @@ const CartPage = () => {
 										setCartCount={setCartCount}
 									/>
 								</div>
+								{cart.length !== 0 && 
 								<div className="xl:absolute xl:right-0 w-full xl:w-[350px] h-fit mt-6 xl:mt-0 xl:ml-6">
 									<div className="w-full h-[8em] bg-white flex justify-between items-start p-[1.25em] rounded-xl shadow-lg relative hover-scale-div">
 										<div className="flex justify-between w-full">
@@ -64,7 +65,7 @@ const CartPage = () => {
 											onClick={() => navigate('/order')}
 										/>
 									</div>
-								</div>
+								</div>}
 							</div>
 						</div>
 					</div>
