@@ -8,14 +8,14 @@ const Footer = () => {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
   return (
-    <div className="fixed bottom-0 left-0 sm:left-0 sm:right-0 md:left-[10em] md:right-[10em] px-[0.5em] md:px-[0.5em] pt-[0.5em] rounded-t-2xl bg-white">
+    <div className="fixed z-100 bottom-0 left-0 sm:left-0 sm:right-0 md:left-[10em] md:right-[10em] px-[0.5em] md:px-[0.5em] pt-[0.5em] rounded-t-2xl bg-white">
 			<table className="relative table-auto w-full bt-[0.5em] bl-[0.5em] br-[0.5em] text-left">
 				<tbody>
 					<tr>
 						<td className="row-span-2 align-top p-4 w-[30%] hidden md:table-cell" rowSpan={2}>
 						<ButtonWithIcon
 							text="QPICK"
-							className="font-montserrat font-bold text-[25px]"
+							className="font-montserrat font-bold text-[25px] hover-scale-button"
 							onClick={() => navigate('/')}
 						/>
 						</td>
@@ -23,12 +23,14 @@ const Footer = () => {
 							<ButtonWithIcon
 								text={t("footer.favourite")}
 								onClick={() => navigate('/fav')}
+								className="hover-text-gray"
 							/>
 						</td>
 						<td className="w-[20%] text-center">
 							<ButtonWithIcon
 								text={t("footer.terms")}
 								onClick={() => navigate('/terms')}
+								className="hover-text-gray"
 							/>
 						</td>
 						<td className="w-[30%] hidden lg:table-cell" rowSpan={2}>
@@ -46,6 +48,7 @@ const Footer = () => {
 							<ButtonWithIcon
 								text={t("footer.cart")}
 								onClick={() => navigate('/cart')}
+								className="hover-text-gray"
 							/>
 						</td>
 						<td className="align-top" rowSpan={2}>
@@ -60,6 +63,7 @@ const Footer = () => {
 							<ButtonWithIcon
 								text={t("footer.contacts")}
 								onClick={() => navigate('/contacts')}
+								className="hover-text-gray"
 							/>
 						</td>
 						<td className=" hidden lg:table-cell"></td>

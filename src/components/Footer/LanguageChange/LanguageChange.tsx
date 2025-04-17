@@ -26,7 +26,7 @@ const LanguageChange = () => {
               }} 
               text={name}
               disabled={isActive} 
-              className={`text-[1em] px-[0.5em] py-[0.3em] font-medium ${isActive ? 'text-morange' : 'text-black'}`}
+              className={`hover-scale-button text-[1em] px-[0.5em] py-[0.3em] font-medium ${isActive ? 'text-morange' : 'text-black'}`}
             />
           )
         })}

@@ -4,3 +4,27 @@
   padding: 2rem;
   text-align: center;
 }
+
+.hover-scale-button {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.hover-scale-button:hover {
+  transform: scale(1.03);
+  filter: brightness(0.9);
+}
+
+.hover-text-gray {
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+.hover-text-gray:hover {
+  color: gray;
+}
+
+.hover-scale-div {
+  transition: transform 0.2s ease;
+}
+.hover-scale-div:hover {
+  transform: scale(1.03);
+}
