@@ -27,6 +27,9 @@ i18n.use(initReactI18next).init({
 						},
 						cartPage: {
 							empty: "Your cart is empty.",
+							title: "Cart",
+							total: "TOTAL",
+							orderBtn: "Go to checkout",
 						},
 					}
         },
@@ -52,6 +55,9 @@ i18n.use(initReactI18next).init({
 						},
 						cartPage: {
 							empty: "Ваша корзина пуста.",
+							title: "Корзина",
+							total: "ИТОГО",
+							orderBtn: "Перейти к оформлению",
 						},
 					}
         },
@@ -77,6 +83,9 @@ i18n.use(initReactI18next).init({
 						},
 						cartPage: {
 							empty: "Сіздің себетіңіз бос.",
+							title: "Арба",
+							total: "БАРЛЫҒЫ",
+							orderBtn: "Дизайнға өтіңіз",
 						},
 					}
         }

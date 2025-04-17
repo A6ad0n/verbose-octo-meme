@@ -16,11 +16,14 @@ const CartPage = () => {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
 	const { favCount, cartCount, setCartCount } = useAppCounts();
+
 	const loadCartItems = () => {
 		const stored = localStorage.getItem('cart');
 		const cart: Array<ProductType> = stored ? JSON.parse(stored) : [];
 		return cart;
 	}
+	const cart: Array<ProductType> = loadCartItems();
+
 	const findSum = (arr: Array<ProductType>): number => {
 		return arr.reduce((sum, item) => sum + item.count! * parseNumber(item.price), 0);
 	}
@@ -38,23 +41,26 @@ const CartPage = () => {
 								{t("cartPage.title")}
 							</h2>
 
-							<CartProducts
-								defaultItems={loadCartItems()}
-								setCartCount={setCartCount}
-							/>
-						</div>
-
-						<div className="w-full xl:w-[350px] h-fit justify-self-end">
-							<div className="w-full h-[8em] bg-white flex justify-between items-start p-[1.25em] rounded-xl shadow-lg relative">
-								<div className="flex justify-between w-full">
-									<span className="text-lg font-semibold">{t("cartPage.total")}</span>
-									<span className="text-lg font-semibold">{t("currency")} {findSum(loadCartItems())}</span>
+							<div className="flex flex-col xl:flex-row w-full">
+								<div className="w-full overflow-x-hidden">
+									<CartProducts
+										defaultItems={cart}
+										setCartCount={setCartCount}
+									/>
 								</div>
-								<ButtonWithIcon
-									className="absolute bottom-0 left-0 w-full bg-black text-white font-semibold py-[1.25em] rounded-xl"
-									text={t("cartPage.orderBtn")}
-									onClick={() => navigate('/order')}
-								/>
+								<div className="xl:absolute xl:right-0 w-full xl:w-[350px] h-fit mt-6 xl:mt-0 xl:ml-6">
+									<div className="w-full h-[8em] bg-white flex justify-between items-start p-[1.25em] rounded-xl shadow-lg relative">
+										<div className="flex justify-between w-full">
+											<span className="text-lg font-semibold">{t("cartPage.total")}</span>
+											<span className="text-lg font-semibold">{t("currency")} {findSum(cart)}</span>
+										</div>
+										<ButtonWithIcon
+											className="absolute bottom-0 left-0 w-full bg-black text-white font-semibold py-[1.25em] rounded-xl"
+											text={t("cartPage.orderBtn")}
+											onClick={() => navigate('/order')}
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
