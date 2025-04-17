@@ -49,13 +49,13 @@ const CartPage = () => {
 									/>
 								</div>
 								<div className="xl:absolute xl:right-0 w-full xl:w-[350px] h-fit mt-6 xl:mt-0 xl:ml-6">
-									<div className="w-full h-[8em] bg-white flex justify-between items-start p-[1.25em] rounded-xl shadow-lg relative">
+									<div className="w-full h-[8em] bg-white flex justify-between items-start p-[1.25em] rounded-xl shadow-lg relative hover-scale-div">
 										<div className="flex justify-between w-full">
 											<span className="text-lg font-semibold">{t("cartPage.total")}</span>
 											<span className="text-lg font-semibold">{t("currency")} {findSum(cart)}</span>
 										</div>
 										<ButtonWithIcon
-											className="absolute bottom-0 left-0 w-full bg-black text-white font-semibold py-[1.25em] rounded-xl"
+											className="absolute bottom-0 left-0 w-full bg-black text-white font-semibold py-[1.25em] rounded-xl hover-scale-button"
 											text={t("cartPage.orderBtn")}
 											onClick={() => navigate('/order')}
 										/>

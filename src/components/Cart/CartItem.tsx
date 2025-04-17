@@ -26,13 +26,13 @@ const CartItem = ({ product, onIncrease, onDecrease, onDelete }: CartItemProps) 
 				<div className="flex items-center space-x-2">
 					<ButtonWithIcon
 					  text="+"
-						className="bg-morange text-white text-xs rounded-full w-[2em] h-[2em] flex items-center justify-center"
+						className="bg-morange text-white text-xs rounded-full w-[2em] h-[2em] flex items-center justify-center hover-scale-button"
 						onClick={onIncrease}
 					/>
 					<span className="text-lg">{product.count!}</span>
 					<ButtonWithIcon
 						text="-"
-						className="bg-morange text-white text-xs rounded-full w-[2em] h-[2em] flex items-center justify-center"
+						className="bg-morange text-white text-xs rounded-full w-[2em] h-[2em] flex items-center justify-center hover-scale-button"
 						onClick={onDecrease}
 					/>
 				</div>
@@ -46,7 +46,7 @@ const CartItem = ({ product, onIncrease, onDecrease, onDelete }: CartItemProps) 
       <div className="absolute top-[1em] right-[1em]">
         <ButtonWithIcon
           Icon={RiDeleteBin2Line}
-          className="text-red-500"
+          className="text-red-500 hover-scale-button"
           onClick={onDelete}
         />
       </div>
